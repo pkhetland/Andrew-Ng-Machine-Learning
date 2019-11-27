@@ -13,10 +13,8 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-
-
-
-
+residual = ((X*theta)-y).^2;
+J = sum((1/(2*m))*residual);
 % =========================================================================
 
 end
