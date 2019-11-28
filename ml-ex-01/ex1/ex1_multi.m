@@ -105,8 +105,8 @@ fprintf('\n');
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
 house = [1 1650 3];
-house_norm = abs((house(1, 2:3)-mu)/sigma);
-price = sum(theta*house_norm); 
+house_norm = (house(1, 2:3)-mu)/sigma;
+price = abs(sum(house_norm*theta)); 
 
 
 % ============================================================
@@ -151,7 +151,7 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+price = abs(sum(house*theta)); 
 
 
 % ============================================================
