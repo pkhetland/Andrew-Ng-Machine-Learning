@@ -104,7 +104,9 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
+house = [1 1650 3];
+house_norm = abs((house(1, 2:3)-mu)/sigma);
+price = sum(theta*house_norm); 
 
 
 % ============================================================
